@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>GitHub profile</title>
+  </head>
+  <body>
+    <header id="search-header">
+      <div id="search-menu">
+        <div class="search-bar">
+          <label for="search"
+            ><img src="SVG/Search.svg" alt="Icon Research bar"
+          /></label>
+          <input
+            id="inputUsername"
+            type="text"
+            id="search"
+            placeholder="Username"
+          />
+        </div>
+        <div id="dropdown-menu">
+          <img
+            id="dropdown-img"
+            src="https://avatars.githubusercontent.com/u/9919?v=4"
+            alt=""
+            class="absolute-photo"
+            width="100"
+            height="100"
+          />
+          <div id="dropdown-card">
+            <h1 id="dropdown-name">GitHub</h1>
+            <p id="dropdown-des">How People Build Software.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main-container">
+      <section id="photo-container">
+        <figure id="photo-profile">
+          <img
+            id="photo-profile-img"
+            src="https://avatars.githubusercontent.com/u/9919?v=4"
+            alt=""
+            class="absolute-photo"
+            width="100"
+            height="100"
+          />
+        </figure>
+        <div class="labels-container flex-row flex-wrap">
+          <span class="profile-label"
+            >Followers
+            <div class="vertical-separator"></div>
+            <span id="followers-number" class="number">35198</span></span
+          >
+          <span class="profile-label"
+            >Following
+            <div class="vertical-separator"></div>
+            <span id="following-number" class="number">0</span></span
+          >
+          <span class="profile-label"
+            >Location
+            <div class="vertical-separator"></div>
+            <span id="profileLocation" class="number"
+              >San Francisco, CA</span
+            ></span
+          >
+        </div>
+      </section>
+      <section id="name-description">
+        <h1 class="profile-name" id="profile-name">GitHub</h1>
+        <p class="profile-description" id="profile-description">
+          How People Build Software.
+        </p>
+      </section>
+      <section id="repositories">
+        <div class="repository-card flex-col flex-wrap" id="repo1">
+          <h3 id="repo-name1">.Example</h3>
+          <p id="repo-description1">
+            There is any description for this repository
+          </p>
+          <div class="labels-container">
+            <label class="gitLabel" id="MIT-label1"
+              ><img src="SVG/Chield_alt.svg" alt="" />MIT</label
+            >
+            <label class="gitLabel" id="Nesting-label1"
+              ><img src="SVG/Nesting.svg" alt="" />123</label
+            >
+            <label class="gitLabel" id="Star-label1"
+              ><img src="SVG/Star.svg" alt="" /> Stars</label
+            >
+            <small class="gitLabel" id="last-label1">Last Update</small>
+          </div>
+        </div>
+        <div class="repository-card flex-col flex-wrap" id="repo2">
+          <h3 id="repo-name2">.Example</h3>
+          <p id="repo-description2">
+            There is any description for this repository
+          </p>
+          <div class="labels-container">
+            <label class="gitLabel" id="MIT-label2"
+              ><img src="SVG/Chield_alt.svg" alt="" />MIT</label
+            >
+            <label class="gitLabel" id="Nesting-label2"
+              ><img src="SVG/Nesting.svg" alt="" />123</label
+            >
+            <label class="gitLabel" id="Star-label2"
+              ><img src="SVG/Star.svg" alt="" /> Stars</label
+            >
+            <small class="gitLabel" id="last-label2">Last Update</small>
+          </div>
+        </div>
+        <div class="repository-card flex-col flex-wrap" id="repo3">
+          <h3 id="repo-name3">.Example</h3>
+          <p id="repo-description3">
+            There is any description for this repository
+          </p>
+          <div class="labels-container">
+            <label class="gitLabel" id="MIT-label3"
+              ><img src="SVG/Chield_alt.svg" alt="" />MIT</label
+            >
+            <label class="gitLabel" id="Nesting-label3"
+              ><img src="SVG/Nesting.svg" alt="" />123</label
+            >
+            <label class="gitLabel" id="Star-label3"
+              ><img src="SVG/Star.svg" alt="" /> Stars</label
+            >
+            <small class="gitLabel" id="last-label3">Last Update</small>
+          </div>
+        </div>
+        <div class="repository-card flex-col flex-wrap" id="repo4">
+          <h3 id="repo-name4">.Example</h3>
+          <p id="repo-description4">
+            There is any description for this repository
+          </p>
+          <div class="labels-container">
+            <label class="gitLabel" id="MIT-label4"
+              ><img src="SVG/Chield_alt.svg" alt="" />MIT</label
+            >
+            <label class="gitLabel" id="Nesting-label4"
+              ><img src="SVG/Nesting.svg" alt="" />123</label
+            >
+            <label class="gitLabel" id="Star-label4"
+              ><img src="SVG/Star.svg" alt="" /> Stars</label
+            >
+            <small class="gitLabel" id="last-label4">Last Update</small>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a
+        href="https://github.com/"
+        target="_blank"
+        class="text-center"
+        id="all-repositories"
+        ><img
+          src="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          alt=""
+        />View all repositories</a
+      >
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
