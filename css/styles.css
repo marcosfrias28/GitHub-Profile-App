@@ -56,6 +56,7 @@ body {
 }
 
 .search-bar {
+  max-width: 450px;
   width: 450px;
   height: 50px;
   background-color: #20293a;
@@ -125,29 +126,38 @@ body {
 #photo-container {
   position: relative;
   width: 1024px;
-  height: 3rem;
-}
-
-#photo-profile {
-  position: absolute;
-  top: -50px;
-  left: 60px;
-  background-color: transparent;
-  border: 10px solid #20293a;
-  border-radius: 1.5rem;
+  height: auto;
 }
 
 .absolute-photo {
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  background-color: #20293a;
+  border: 10px solid #20293a;
+  border-radius: 1.5rem;
+}
+.no-absolute-photo {
+  background-color: #20293a;
+  border: 3px solid #20293a;
   border-radius: 1.5rem;
 }
 
 .labels-container {
   display: flex;
-  flex-flow: row nowrap;
-  place-content: flex-start;
+  flex-flow: row wrap;
+  place-content: flex-end;
   place-items: center;
   gap: 30px;
-  margin-top: 10px;
+  margin: 10px 130px 0 0;
+}
+
+.gitlabel-container {
+  display: flex;
+  flex-flow: row wrap;
+  place-content: flex-start;
+  place-items: center;
+  gap: 20px;
 }
 
 .gitLabel {
@@ -205,6 +215,9 @@ footer {
 }
 
 .repository-card {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
   width: 450px;
   height: auto;
   min-height: 150px;
@@ -217,52 +230,110 @@ footer {
   font-weight: lighter;
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 footer {
   margin: 50px 0;
+  padding-bottom: 50px;
   font-size: large;
   text-align: center;
 }
 
 @media (width >= 0px) and (width <= 970px) {
+  #main-container {
+    padding: 0 20px;
+  }
   #repositories {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     width: auto;
     gap: 20px;
-    justify-content: center;
+    place-content: center;
+    place-items: center;
   }
 
   #photo-container {
     position: relative;
-    width: auto;
-    height: 3rem;
+    width: 100%;
   }
+
+  .absolute-photo {
+    top: -40px;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .labels-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  .gitlabel-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  #search-header,
+  #search-menu {
+    min-height: 400px;
+  }
+
+  #search-menu {
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .search-bar {
+    width: 90%;
+    min-width: 350px;
+    margin: 0;
+  }
+
+  #dropdown-menu {
+    height: auto;
+    width: auto;
+    min-width: 350px;
+    max-width: 90%;
+    min-height: 150px;
+    padding: 10px 20px;
+    color: #4a5567;
+    border-radius: 0.7rem;
+  }
+
   #name-description {
     align-self: center;
+    padding: 0 120px 0 0;
   }
-  #photo-profile {
-    position: absolute;
-    top: -50px;
-    left: 60px;
-    background-color: transparent;
-    border: 10px solid #20293a;
-    border-radius: 1.5rem;
+
+  .repository-card {
+    width: auto;
+    height: auto;
+    gap: 30px;
+    min-height: 100px;
+    min-width: 350px;
+    border-radius: 1rem;
+    padding: 20px;
+    background-image: linear-gradient(to right, #111729, #1d1b48);
+  }
+
+  .profile-label {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 350px;
+    height: max-content;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    color: #4a5567;
+    background-color: #111729;
   }
 }

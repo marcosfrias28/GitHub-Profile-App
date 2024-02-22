@@ -15,9 +15,7 @@ selectUsername.addEventListener("click", getDataFromGitHub);
 inputUsername.addEventListener("change", dropdownMenu);
 
 async function dropdownMenu() {
-  selectUsername.style.visibility = "visible";
   const inputName = document.getElementById("inputUsername").value;
-
   await fetch(`https://api.github.com/users/${inputName}`)
     .then((response) => response.json())
     .then((data) => {
@@ -29,6 +27,7 @@ async function dropdownMenu() {
       }
       dropdownName.textContent = name ? name : login;
       dropdownDescription.textContent = bio ? bio : "Any description set";
+      selectUsername.style.visibility = "visible";
     })
     .catch(
       () =>
